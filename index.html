@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saranyaa C - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="logo.png" alt="Saranyaa Logo" class="logo" />
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Frontend & Software Developer</p>
+        <h1>Hi, I'm <span>Saranyaa</span><br>From Salem</h1>
+        <div class="header-img">
+          <img src="myimg2.jpeg" alt="Saranyaa working on web development">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col1">
+          <img src="myimg2.jpeg" alt="Saranyaa Photo">
+        </div>
+        <div class="about-col2">
+          <h2 class="subtitle">About Me</h2>
+          <p>
+            I'm currently an Electronics and Communication Engineering student who loves turning ideas into websites. I enjoy solving problems through code and am always eager to learn, grow, and explore new opportunities in the software field.
+          </p>
+          <br>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills', event)">Technical Skills</p>
+            <p class="tab-links" onclick="opentab('certification', event)">Certifications</p>
+            <p class="tab-links" onclick="opentab('internship', event)">Internship</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>Frontend: HTML, CSS, JavaScript</li>
+              <li>Languages: C, Java, Python (basic)</li>
+              <li>Tools: Git, GitHub, VS Code</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="certification">
+            <ul>
+              <li>CodeChef Contest Participant</li>
+              <li>Soft Skills Certificate (NPTEL)</li>
+              <li>Crash Course on Python (Coursera)</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="internship">
+            <ul>
+              <li>IoT Product Automation - Dagslore Tech</li>
+              <li>AI In-plant Training - Brainery Spottechnology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <div class="container">
+      <h2 class="subtitle">Services</h2>
+      <div class="services-list">
+        <div>
+          <h3>Web Design</h3>
+          <p>Modern and responsive designs using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div>
+          <h3>Frontend Development</h3>
+          <p>Interactive UIs, mobile-friendly layouts, and clean user experiences.</p>
+        </div>
+        <div>
+          <h3>Tech Skills Support</h3>
+          <p>Core coding support in C, Java, and Python basics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio">
+    <div class="container">
+      <h2 class="subtitle">Portfolio</h2>
+      <div class="work-list">
+        <div class="work">
+          <img src="project1.jpg" alt="Coffee App Screenshot">
+          <div class="layer">
+            <h3>Coffee App</h3>
+            <p>Responsive UI for a coffee shop with interactive animations.</p>
+            <a href="https://saranyaa-15.github.io/pro1/" target="_blank" rel="noopener noreferrer">🔗</a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="project2.png" alt="Portfolio Screenshot">
+          <div class="layer">
+            <h3>My Portfolio</h3>
+            <p>This live site! Made with HTML, CSS, and a touch of JavaScript.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">🔗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="blog">
+    <div class="container">
+      <h2 class="subtitle">Blog & Articles</h2>
+      <div class="blog-container">
+        <div class="blog-card">
+          <h3>How I Built My Portfolio Website</h3>
+          <p>A breakdown of tools, layout, and CSS tricks I used to make this site responsive and clean.</p>
+        </div>
+        <br>
+        <div class="blog-card">
+          <h3>JavaScript Tips for Beginners</h3>
+          <p>4 simple tricks I wish I knew earlier: functions, arrays, DOM, and debugging!</p>
+        </div>
+        <br>
+        <div class="blog-card">
+          <h3>Managerial Skills</h3>
+          <p>I served as Team Leader for the NASA Space Apps Challenge 2024. This experience strengthened my leadership skills.</p>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <h2 class="subtitle">Contact Me</h2>
+      <p>Email: <a href="mailto:csaranyaa2005@gmail.com"><strong>csaranyaa2005@gmail.com</strong></a></p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/saranyaa-chandrasekar04/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/Saranyaa-15" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.codechef.com/users/csaranyaa2005" target="_blank" rel="noopener noreferrer">CodeChef</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const tabLinks = document.getElementsByClassName("tab-links");
+    const tabContents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabName, event) {
+      for (let link of tabLinks) {
+        link.classList.remove("active-link");
+      }
+      for (let content of tabContents) {
+        content.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabName).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
